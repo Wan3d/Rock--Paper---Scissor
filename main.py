@@ -1,6 +1,5 @@
 import tkinter
 import tkinter as tk
-from PIL import Image, ImageTk
 from tkinter.ttk import *
 from tkinter import *
 from tkinter import messagebox
@@ -16,6 +15,7 @@ window = tk.Tk()
 window.title("Rock, Paper & Scissor")
 window.configure(background="black")
 window.geometry("800x500")
+window.iconbitmap('game-icon.ico')
 
 # Updating choice
 def updateChoice(userSelection):
@@ -102,7 +102,8 @@ rockButton = Button(window,
                     text='Rock',
                     height=5, 
                     width=15, 
-                    bg='red').place(relx=0.3,
+                    bg='red',
+                    font=('Times New Roman', 10)).place(relx=0.3,
                                     rely=0.8, 
                                     anchor='center')
 paperButton = Button(window, 
@@ -110,7 +111,8 @@ paperButton = Button(window,
                     command=lambda:updateChoice("Paper"),
                     height=5,
                     width=15,
-                    bg='blue').place(relx=0.5,
+                    bg='blue',
+                    font=('Times New Roman', 10)).place(relx=0.5,
                                     rely=0.8,
                                     anchor='center')
 scissorButton = Button(window, 
@@ -118,10 +120,11 @@ scissorButton = Button(window,
                     command=lambda:updateChoice("Scissor"),
                     height=5,
                     width=15,
-                    bg='green').place(relx=0.7,
+                    bg='green',
+                    font=('Times New Roman', 10)).place(relx=0.7,
                                     rely=0.8,
                                     anchor='center')
 
-# Dispose window
+# Set window
 window.mainloop()
 
